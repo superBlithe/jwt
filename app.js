@@ -49,7 +49,7 @@ router.post("/login", (ctx, next) => {
     ctx.body = {
       success: true,
       msg: "登录成功",
-      token
+      token: token
     };
   }
 });
