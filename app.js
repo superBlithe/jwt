@@ -24,6 +24,9 @@ app.use(
   })
 );
 
+router.get("/", ctx => {
+  ctx.body = "hello";
+});
 router.get("/userInfo", ctx => {
   ctx.body = {
     uid: 1,
@@ -41,7 +44,7 @@ router.post("/login", (ctx, next) => {
   } else {
     // 登录验证
     const token = jsonwebtoken.sign({ nickname: data.nickname }, "token", {
-      expiresIn: '1h'
+      expiresIn: "1h"
     });
     ctx.body = {
       success: true,
