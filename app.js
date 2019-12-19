@@ -25,7 +25,7 @@ app.use(
 );
 
 router.get("/", ctx => {
-  ctx.body = "hello";
+  ctx.body = "hello fugui";
 });
 router.get("/userInfo", ctx => {
   ctx.body = {
@@ -44,7 +44,7 @@ router.post("/login", (ctx, next) => {
   } else {
     // 登录验证
     const token = jsonwebtoken.sign({ nickname: data.nickname }, "token", {
-      expiresIn: "1h"
+      expiresIn: 10
     });
     ctx.body = {
       success: true,
