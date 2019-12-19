@@ -54,6 +54,6 @@ router.post("/login", (ctx, next) => {
   }
 });
 app.use(router.routes());
-app.listen(4444, () => {
-  console.log("app run http://localhost:4444");
+app.listen(80, () => {
+  console.log("app run http://localhost:80");
 });
